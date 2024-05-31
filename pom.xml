@@ -51,11 +51,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>ai.djl</groupId>
-			<artifactId>djl-pytorch</artifactId>
-			<version>0.20.0</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>nz.net.ultraq.thymeleaf</groupId>
