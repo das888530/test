@@ -1,0 +1,17 @@
+FROM openjdk:17 as Builder
+
+WORKDIR /app
+
+RUN mvn install
+
+#####
+
+FROM openjdk:17-slim 
+
+COPY ../target/demo.0.0.1-SNAPSHOT.jar /app
+
+WORKDIR /app
+
+COPY --from=Builder /app /app
+
+CMD ["java","-jar","/app/demo.0.0.1-SNAPSHOT.jar"]
